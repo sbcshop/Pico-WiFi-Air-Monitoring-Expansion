@@ -9,6 +9,7 @@ WiFi_SSID='WiFi_SSID'  # Wifi_SSID
 WiFi_password = 'WiFi_Password'      # WiFi Password
 TCP_ServerIP = "184.106.153.149"   # Thingspeak IP address
 Port = '80'                    # Thingspeak port
+API_KEY = "FPJBGCLY9V0HNI82"
 
 uart = UART(1, 9600)           # Default Baud rate
 
@@ -66,8 +67,8 @@ def read_value(sensor):
     
     
     
-    #data="GET /update?key=FPJBGCLY9V0HNI82&field1="+str(reading.pm10_cf1)+"\r\n";
-    data="GET /update?key=FPJBGCLY9V0HNI82&field1=%s&field2=%s&field3=%s&field4=%s"%(reading.pm10_cf1,
+    #data="GET /update?key="+API_KEY+"&field1="+str(reading.pm10_cf1)+"\r\n";
+    data="GET /update?key="+API_KEY+"&field1=%s&field2=%s&field3=%s&field4=%s"%(reading.pm10_cf1,
                                                                            reading.pm25_cf1,
                                                                            reading.pm100_cf1,
                                                                                      bme.values[0])+"\r\n";
