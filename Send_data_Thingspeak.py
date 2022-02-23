@@ -9,7 +9,7 @@ WiFi_SSID='WiFi_SSID'  # Wifi_SSID
 WiFi_password = 'WiFi_Password'      # WiFi Password
 TCP_ServerIP = "184.106.153.149"   # Thingspeak IP address
 Port = '80'                    # Thingspeak port
-API_KEY = "FPJBGCLY9V0HNI81AP"
+API_KEY = "write_your_API_Key" #write your API Key
 
 uart = UART(1, 9600)           # Default Baud rate
 
